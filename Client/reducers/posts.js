@@ -1,5 +1,5 @@
 const todos = (state = [], action) => {
-  switch (action.type) {
+  	switch (action.type) {
     case 'set_posts':
       return action.posts;
     case 'set_post_title':
@@ -21,26 +21,26 @@ const todos = (state = [], action) => {
           : todo
       )
     case 'cancel_post':
-      return state.map(todo =>
-        (todo.id === action.id) 
-          ? {...todo, completed: !todo.completed}
-          : todo
-      )
+      	return state.map(todo =>
+        	(todo.id === action.id) 
+          	? {...todo, completed: !todo.completed}
+          	: todo
+      	)
     case 'delete_post':
-      return state.map(todo =>
-        (todo.id === action.id) 
-          ? {...todo, completed: !todo.completed}
-          : todo
-      )
+      	return state.map(todo =>
+        	(todo.id === action.id) 
+          	? {...todo, completed: !todo.completed}
+          	: todo
+      	)
     case 'set_loading':
-      return state.map(todo =>
-        (todo.id === action.id) 
-          ? {...todo, completed: !todo.completed}
-          : todo
-      )
+      	return state.map(todo =>
+        	(todo.id === action.id) 
+          	? {...todo, completed: !todo.completed}
+          	: todo
+      	)
     default:
-      return state
-  }
+     	return state
+  	}
 }
 
 export default todos
